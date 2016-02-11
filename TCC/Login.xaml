@@ -1,0 +1,64 @@
+﻿<Page
+    x:Class="TCC.Login"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TCC"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Background="White">
+    <Grid Background="White" Width="400">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="170"/>
+            <RowDefinition Height="120"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="150"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Width="400">
+            <Canvas x:Name="logo" Height="170" UseLayoutRounding="False" Width="170" Margin="0" VerticalAlignment="Top">
+                <Canvas.Clip>
+                    <RectangleGeometry Rect="0,0,428,426"/>
+                </Canvas.Clip>
+                <Image x:Name="PsdLayer" Height="170" Source="Assets/Image.png" Width="170" Tapped="PsdLayer_Tapped"/>
+            </Canvas>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Width="400">
+            <Canvas x:Name="LOGIN" RenderTransformOrigin="0.513,-0.918" Canvas.Left="35" Canvas.Top="225">
+                <Path x:Name="Rectangle_2" Data="F1M1,1C1,1 962,1 962,1 962,1 962,2 962,2 962,2 1,2 1,2 1,2 1,1 1,1z" Fill="#FF1C1CEC" Height="3" Canvas.Left="0" Canvas.Top="130"/>
+                <TextBox x:Name="txtLogin" Canvas.Left="72.5" FontSize="20" Canvas.Top="45" Height="65" Width="255" PlaceholderText="LOGIN" KeyUp="txtLogin_KeyUp">
+                    <TextBox.BorderBrush>
+                        <ImageBrush Stretch="Fill"/>
+                    </TextBox.BorderBrush>
+                    <TextBox.Background>
+                        <ImageBrush Stretch="Fill"/>
+                    </TextBox.Background>
+                </TextBox>
+            </Canvas>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Width="400">
+            <Canvas x:Name="PASS" Canvas.Left="30" Canvas.Top="400">
+                <Path x:Name="Rectangle_3" Data="F1M1,1C1,1 962,1 962,1 962,1 962,2 962,2 962,2 1,2 1,2 1,2 1,1 1,1z" Fill="White" Height="3" Canvas.Left="0" Opacity="0.702" HorizontalAlignment="Left" Margin="0,110,0,0"/>
+                <PasswordBox x:Name="txtPasswd"  Canvas.Left="72.5" FontFamily="Roboto" FontSize="20" Canvas.Top="45" Height="65" Width="255" VerticalAlignment="Top" Opacity="0.8" BorderThickness="0,0,0,4" PlaceholderText="PASSWORD" KeyUp="txtPasswd_KeyUp">
+                    <PasswordBox.BorderBrush>
+                        <ImageBrush Stretch="Fill"/>
+                    </PasswordBox.BorderBrush>
+                    <PasswordBox.Background>
+                        <ImageBrush Stretch="Fill"/>
+                    </PasswordBox.Background>
+                </PasswordBox>
+                <TextBlock x:Name="forgOt_password_" FontSize="18" FontFamily="Roboto" LineStackingStrategy="BlockLineHeight" LineHeight="24.72222" TextAlignment="Left" TextWrapping="Wrap" Text="FORGOT PASSWORD?" Canvas.Top="140" Tapped="forgOt_password__Tapped" Foreground="#FF166AE4" SelectionHighlightColor="#FF166AE4" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="115,0,0,0"/>
+            </Canvas>
+        </StackPanel>
+        <StackPanel Grid.Row="3" Margin="0,29,0,-29" Width="400">
+            <Border BorderBrush="Black" CornerRadius="8,8,8,8" BorderThickness="1" Height="55" Background="#FF0AB168" Margin="10" Tapped="Border_Tapped" Width="165">
+                <TextBlock x:Name="Login1" Foreground="White" FontSize="29.333" FontFamily="Roboto Lt" LineStackingStrategy="BlockLineHeight" LineHeight="43.26389" TextAlignment="Left" TextWrapping="Wrap" Text="LOGIN" RenderTransformOrigin="-0.255,0.337" VerticalAlignment="Center" HorizontalAlignment="Center" Canvas.Left="147" Canvas.Top="60" UseLayoutRounding="True"/>
+            </Border>
+            <TextBlock x:Name="Still_don_t_have_an_account__Register_now_" FontSize="18" LineStackingStrategy="BlockLineHeight" LineHeight="30.90278" TextAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Tapped="Still_don_t_have_an_account__Register_now__Tapped"  Text="Register now!" HorizontalAlignment="Center" UseLayoutRounding="True"/>
+        </StackPanel>
+        <!-- Other UI elements -->
+        <StackPanel x:Name="LoadingIndicator" VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="Collapsed">
+            <TextBlock Text="Loading..."/>
+            <ProgressRing IsActive="True" VerticalAlignment="Center"/>
+        </StackPanel>
+    </Grid>
+</Page>

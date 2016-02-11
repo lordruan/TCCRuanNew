@@ -1,0 +1,93 @@
+﻿<Page
+    x:Class="TCC.Registrar"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:TCC"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"  Background="#FFFDFDFD">
+    <Page.BorderBrush>
+        <ImageBrush Stretch="Fill"/>
+    </Page.BorderBrush>
+
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="Fill"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="200"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="1" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="400">
+            <StackPanel.Background>
+                <ImageBrush Stretch="Fill"/>
+            </StackPanel.Background>
+            <Image x:Name="login1" Source="Assets/login.png" Margin="115,0" Width="170" Height="170" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBlock x:Name="Add_your_photo" Foreground="#FFB815FA" FontSize="24"  LineStackingStrategy="BlockLineHeight" TextAlignment="Center" TextWrapping="Wrap" Text="Add your photo" Margin="0" Height="30" VerticalAlignment="Bottom" FontWeight="Bold"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Width="400">
+            <StackPanel.Background>
+                <ImageBrush Stretch="Fill"/>
+            </StackPanel.Background>
+            <TextBox x:Name="txtLogin" Canvas.Left="72.5" FontSize="20" Canvas.Top="45" Height="65" Width="255" Text="" VerticalAlignment="Top" Padding="0,0,8,0" UseLayoutRounding="False" PlaceholderText="LOGIN" MinWidth="255" MinHeight="65" >
+                <TextBox.BorderBrush>
+                    <ImageBrush Stretch="Fill"/>
+                </TextBox.BorderBrush>
+                <TextBox.Background>
+                    <ImageBrush Stretch="UniformToFill"/>
+                </TextBox.Background>
+            </TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Center" Width="400">
+            <StackPanel.Background>
+                <ImageBrush Stretch="Fill"/>
+            </StackPanel.Background>
+            <TextBox x:Name="txtEmail" FontSize="20" Height="65" Width="255" Text="" VerticalAlignment="Top" Padding="0,0,8,0" UseLayoutRounding="False" PlaceholderText="LOGIN@EMAIL.COM" Margin="0" Background="{x:Null}" MinWidth="255" MinHeight="65" >
+                <TextBox.BorderBrush>
+                    <ImageBrush Stretch="Fill"/>
+                </TextBox.BorderBrush>
+            </TextBox>
+        </StackPanel>
+        <StackPanel Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Width="400">
+            <StackPanel.Background>
+                <ImageBrush Stretch="Fill"/>
+            </StackPanel.Background>
+            <PasswordBox x:Name="txtPasswd"  Canvas.Left="72.5"  FontSize="20" Canvas.Top="45" Height="65" Width="255" VerticalAlignment="Top" Opacity="0.8" BorderThickness="0,0,0,4" PlaceholderText="PASSWORD" MinWidth="255" MinHeight="65">
+                <PasswordBox.BorderBrush>
+                    <ImageBrush Stretch="Fill"/>
+                </PasswordBox.BorderBrush>
+                <PasswordBox.Background>
+                    <ImageBrush Stretch="Fill"/>
+                </PasswordBox.Background>
+            </PasswordBox>
+        </StackPanel>
+        <StackPanel Grid.Row="5" HorizontalAlignment="Center" VerticalAlignment="Center" Width="400">
+            <StackPanel.Background>
+                <ImageBrush Stretch="Fill"/>
+            </StackPanel.Background>
+            <PasswordBox x:Name="txtCkPasswd"  Canvas.Left="72.5"  FontSize="20" Canvas.Top="45" Height="65" Width="255" VerticalAlignment="Top" Opacity="0.8" BorderThickness="0,0,0,4" PlaceholderText="CONFIRM" MinWidth="255">
+                <PasswordBox.BorderBrush>
+                    <ImageBrush Stretch="Fill"/>
+                </PasswordBox.BorderBrush>
+                <PasswordBox.Background>
+                    <ImageBrush Stretch="Fill"/>
+                </PasswordBox.Background>
+            </PasswordBox>
+        </StackPanel>
+        <StackPanel Grid.Row="6" HorizontalAlignment="Center" VerticalAlignment="Center" Width="400">
+            <StackPanel.Background>
+                <ImageBrush Stretch="Fill"/>
+            </StackPanel.Background>
+            <Border x:Name="registrar" BorderBrush="Black" CornerRadius="8,8,8,8" BorderThickness="1" Height="55" Background="#FF0AB168" Margin="72.5,10" Width="165" Tapped="registrar_Tapped">
+                <TextBlock x:Name="Login1" Foreground="White" FontSize="28"  LineStackingStrategy="BlockLineHeight" LineHeight="43.26389" TextAlignment="Left" TextWrapping="Wrap" Text="REGISTRAR" RenderTransformOrigin="-0.255,0.337" VerticalAlignment="Center" HorizontalAlignment="Center" Canvas.Left="147" Canvas.Top="60" UseLayoutRounding="True" FontWeight="Bold"/>
+            </Border>
+            <TextBlock x:Name="login" FontSize="18" LineStackingStrategy="BlockLineHeight" LineHeight="30.90278" TextAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Center" Tapped="login_Tapped"  Text="Already have account? Log in now!" HorizontalAlignment="Center" UseLayoutRounding="True" Foreground="Black"/>
+        </StackPanel>
+    </Grid>
+</Page>
